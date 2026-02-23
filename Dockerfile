@@ -1,4 +1,4 @@
-FROM openquantumsafe/liboqs-python:latest
+FROM openquantumsafe/oqs-ossl3-python:latest
 
 WORKDIR /app
 
