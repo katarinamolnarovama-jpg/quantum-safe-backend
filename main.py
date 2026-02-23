@@ -1,4 +1,3 @@
-[main.py](https://github.com/user-attachments/files/25474140/main.py)
 """
 Quantum-Safe Legal Document Encryption System
 Real Kyber-768 + X25519 + AES-256-GCM Implementation
