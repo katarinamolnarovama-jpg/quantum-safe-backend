@@ -3,7 +3,6 @@ uvicorn[standard]==0.24.0
 python-multipart==0.0.6
 asyncpg==0.29.0
 cryptography==41.0.7
-liboqs-python==0.8.0
 pyjwt==2.8.0
 passlib[bcrypt]==1.7.4
 pydantic[email]==2.5.0
