@@ -1,4 +1,6 @@
-FROM openquantumsafe/oqs-ossl3-python:latest
+FROM python:3.11-slim
+
+RUN pip install oqs
 
 WORKDIR /app
 
