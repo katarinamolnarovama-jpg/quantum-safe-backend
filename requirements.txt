@@ -1,25 +1,48 @@
-[requirements.txt](https://github.com/user-attachments/files/25474136/requirements.txt)
-# Quantum-Safe Legal Document Encryption System
-# Requirements for Python 3.9+
-
-# Web Framework
 fastapi==0.104.1
 uvicorn[standard]==0.24.0
 python-multipart==0.0.6
-
-# Database
 asyncpg==0.29.0
-
-# Cryptography
 cryptography==41.0.7
 liboqs-python==0.8.0
-
-# Authentication
 pyjwt==2.8.0
 passlib[bcrypt]==1.7.4
-
-# Data Validation
 pydantic[email]==2.5.0
-
-# CORS
 python-jose[cryptography]==3.3.0
+```
+
+4. Click **"Commit changes"**
+
+---
+
+## STEP 4: Tell Render to use Docker
+
+1. Go to **https://dashboard.render.com**
+2. Click on **quantum-safe-api**
+3. Click **"Settings"** (left sidebar)
+4. Scroll down to find **"Runtime"** or **"Language"**
+5. Change it from **Python** to **Docker**
+6. For the **Dockerfile Path** field type: `./Dockerfile`
+7. **Delete** the Build Command field (clear it completely)
+8. Click **"Save Changes"**
+
+---
+
+## STEP 5: Deploy
+
+1. Click **"Manual Deploy"** (top right)
+2. Click **"Deploy latest commit"**
+3. Wait **5-10 minutes** (Docker builds take longer)
+4. Watch the logs — you should see:
+```
+Installing liboqs-dev...
+✅ liboqs installed
+Successfully installed liboqs-python
+```
+
+---
+
+## STEP 6: Test it
+
+Once deployed, open a new browser tab and go to:
+```
+https://quantum-safe-api.onrender.com/api/v1/health
